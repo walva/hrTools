@@ -33,13 +33,14 @@ class ActivaController extends AbstractController
         $form->handleRequest($request);
 
         $result = null;
+
         if ($form->isSubmitted() && $form->isValid()) {
             /** @var \DateTime $date */
             $date = $form->get('date')->getData();
             $month = $form->get('month')->getData();
             $endDate = clone $date;
             $endDate->add(new \DateInterval("P{$month}M"));
-            $request = [
+            $result = [
                 'computed' => $endDate
             ];
         }
@@ -47,7 +48,7 @@ class ActivaController extends AbstractController
         return $this->render('activa/index.html.twig', [
             'controller_name' => 'ActivaController',
             'form'            => $form->createView(),
-            'result'          => $request,
+            'result'          => $result,
         ]);
     }
 }
