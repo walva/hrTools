@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ActivaController!{% endblock %}
+
+{% block content %}
+
+    {{ form(form) }}
+
+    {% if result is not null %}
+
+        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+            <h1 class="h3">Résultat</h1>
+        </div>
+
+        <b>date de fin:</b>
+        <p>
+            {{ result.computed|date('d/m/Y') }}
+        </p>
+
+
+    {% endif %}
+{% endblock %}
