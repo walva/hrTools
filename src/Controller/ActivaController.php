@@ -45,8 +45,8 @@ class ActivaController extends AbstractController
             ];
         }
 
-        return $this->render('activa/index.html.twig', [
-            'controller_name' => 'ActivaController',
+        return $this->render('form.html.twig', [
+            'title' => "Activa",
             'form'            => $form->createView(),
             'result'          => $result,
         ]);

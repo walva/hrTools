@@ -77,13 +77,31 @@
                             Activa
                         </a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ path('date_calculator') }}">
+                            <span data-feather="file"></span>
+                            Date calculator
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ path('decimal_to_hours') }}">
+                            <span data-feather="file"></span>
+                            Decimal to hours
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ path('hours_to_decimals') }}">
+                            <span data-feather="file"></span>
+                            Hours to decimals
+                        </a>
+                    </li>
                 </ul>
             </div>
         </nav>
 
         <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
             <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                <h1 class="h2">Dashboard</h1>
+                <h1 class="h2">{{ title|default('Dashboard') }}</h1>
 {#                <div class="btn-toolbar mb-2 mb-md-0">#}
 {#                    <div class="btn-group mr-2">#}
 {#                        <button type="button" class="btn btn-sm btn-outline-secondary">Share</button>#}
